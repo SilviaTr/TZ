@@ -1,0 +1,19 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Echiquier', 'data': [2, 62, 13, 98, 80, 85, 77, 64, 83, 27, 45, 21, 28, 8, 82, 26, 87, 69, 85, 20, 41, 16, 11, 55, 43, 68, 96, 94, 52, 68], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': [2, 62, 98, 80, 64, 28, 8, 82, 26, 20, 16, 68, 96, 94, 52, 68], 'impact': 20}]
+Code utilisateur: 
+def pair(input):
+    nouvelle_liste = []
+    for nombre in input:
+        if nombre % 2 == 0: 
+            nouvelle_liste += [nombre] 
+    return nouvelle_liste
+
+output=pair(input)
+print(output)
+
+Contrainte respectée: {'name': 'Pas de remove', 'validation': True, 'message': "Vous avez utilisé la bibliothèque remove. L'exercice n'est pas validé", 'impact': 20}
+Exécution du code utilisateur pour le jeu de données Echiquier
+Résultat du code utilisateur: [2, 62, 98, 80, 64, 28, 8, 82, 26, 20, 16, 68, 96, 94, 52, 68]
+Validation réussie pour le jeu de données Echiquier.
+Fin de l'exercice

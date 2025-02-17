@@ -1,0 +1,25 @@
+{
+    "success": False,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Dictionnaire des livres",
+            "input_data": {},
+            "hidden": False,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": {
+                "Le Petit Prince": "Fiction",
+                "Python pour les Nuls": "Informatique",
+                "L'Étranger": "Littérature"
+            },
+            "impact": 20
+        }
+    ],
+    "contraintes": [],
+    "bonus": [],
+    "console": {
+        "type": None,
+        "message": []
+    }
+}

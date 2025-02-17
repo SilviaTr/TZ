@@ -1,0 +1,29 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'ordre_attaque', 'data': ["L'heure", 'de', 'la', 'destruction', 'est', 'venue.', 'Envoyez', 'toutes', 'les', 'flottes', 'vers', 'la', 'Terre.', 'Aucune', 'pitié', 'ne', 'sera', 'accordée.', 'Notre', 'armada', 'écrasera', 'chaque', 'résistance.', 'Déployez', 'les', 'vaisseaux', 'sur', 'les', 'points', 'stratégiques,', 'anéantissez', 'les', 'cités', 'majeures,', 'et', 'assurez-vous', 'que', 'les', 'Avengers', 'ne', 'puissent', 'pas', 'intervenir.', 'La', 'planète', 'doit', 'tomber', 'sous', 'notre', 'contrôle', 'avant', 'la', 'fin', 'du', 'jour.', 'Nous', 'dominerons', 'cet', 'univers.'], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': "L'heure de la destruction est venue. Envoyez toutes les flottes vers la Terre. Aucune pitié ne sera accordée. Notre armada écrasera chaque résistance. Déployez les vaisseaux sur les points stratégiques, anéantissez les cités majeures, et assurez-vous que les Avengers ne puissent pas intervenir. La planète doit tomber sous notre contrôle avant la fin du jour. Nous dominerons cet univers.", 'impact': 14}, {'name': 'Jeu de données caché 1', 'data': ['Ici', 'le', 'capitaine', 'du', 'vaisseau', 'Eclipse.', 'Nous', 'sommes', 'sous', 'attaque', 'et', 'nos', 'boucliers', 'sont', 'compromis.', 'Nous', 'demandons', 'une', 'assistance', 'immédiate', 'de', 'toute', 'force', 'alliée', 'à', 'portée.', 'Sans', 'intervention,', 'nous', 'ne', 'tiendrons', 'pas', 'plus', 'de', 'quelques', 'minutes.', 'Fin', 'de', 'transmission.'], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': 'Ici le capitaine du vaisseau Eclipse. Nous sommes sous attaque et nos boucliers sont compromis. Nous demandons une assistance immédiate de toute force alliée à portée. Sans intervention, nous ne tiendrons pas plus de quelques minutes. Fin de transmission.', 'impact': 3}, {'name': 'Jeu de données caché 2', 'data': ['Citoyens', 'de', 'la', 'galaxie,', 'nous', 'sommes', 'rassemblés', 'en', 'ce', 'jour', 'historique', 'pour', 'proclamer', "l'instauration", "d'une", 'nouvelle', 'ère.', 'Les', 'traités', 'de', 'paix', 'sont', 'signés', 'et', 'toutes', 'les', 'hostilités', 'prennent', 'fin.', 'Que', 'cette', 'union', 'entre', 'les', 'mondes', 'perdure', 'et', 'garantisse', 'une', 'prospérité', 'durable', 'pour', 'tous.'], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': "Citoyens de la galaxie, nous sommes rassemblés en ce jour historique pour proclamer l'instauration d'une nouvelle ère. Les traités de paix sont signés et toutes les hostilités prennent fin. Que cette union entre les mondes perdure et garantisse une prospérité durable pour tous.", 'impact': 3}]
+Code utilisateur: 
+def concat(input):
+    ordre_attaque_conca = ""
+    for k in range(len(input)):
+        if k < len(input)-1:
+            ordre_attaque_conca += input[k] + " "
+        else:
+            ordre_attaque_conca += input[k]
+    return ordre_attaque_conca
+output = concat(input)
+
+print(output)
+
+Contrainte respectée: {'name': 'Pas de join', 'validation': True, 'message': "Vous avez utilisé la fonction join. L'exercice n'est pas validé", 'impact': 20}
+Contrainte non respectée: Trop de for
+Bonus Obtenu: Moins de 2 for
+Exécution du code utilisateur pour le jeu de données ordre_attaque
+Résultat du code utilisateur: L'heure de la destruction est venue. Envoyez toutes les flottes vers la Terre. Aucune pitié ne sera accordée. Notre armada écrasera chaque résistance. Déployez les vaisseaux sur les points stratégiques, anéantissez les cités majeures, et assurez-vous que les Avengers ne puissent pas intervenir. La planète doit tomber sous notre contrôle avant la fin du jour. Nous dominerons cet univers.
+Validation réussie pour le jeu de données ordre_attaque.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 1
+Résultat du code utilisateur: Ici le capitaine du vaisseau Eclipse. Nous sommes sous attaque et nos boucliers sont compromis. Nous demandons une assistance immédiate de toute force alliée à portée. Sans intervention, nous ne tiendrons pas plus de quelques minutes. Fin de transmission.
+Validation réussie pour le jeu de données Jeu de données caché 1.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 2
+Résultat du code utilisateur: Citoyens de la galaxie, nous sommes rassemblés en ce jour historique pour proclamer l'instauration d'une nouvelle ère. Les traités de paix sont signés et toutes les hostilités prennent fin. Que cette union entre les mondes perdure et garantisse une prospérité durable pour tous.
+Validation réussie pour le jeu de données Jeu de données caché 2.
+Fin de l'exercice

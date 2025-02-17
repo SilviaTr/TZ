@@ -1,0 +1,26 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Code utilisateur: def reparo(texte, carac_a_trouver):
+    if len(carac_a_trouver) != 1:
+        return -1
+    i = 0
+    while i < len(texte):
+        if texte[i] == carac_a_trouver:
+            return i + 1  
+        i += 1      
+    return -1
+Contrainte respectée : Pas de find
+Contrainte respectée : Pas de index
+Contrainte respectée : Trop de if
+Bonus obtenu : Une seule boucle - Vous avez résolu l'exercice avec une seule boucle, +1 points !
+Bonus obtenu : Gestion des cas invalides - Votre code gère correctement les entrées invalides, +1 points !
+Exécution du code utilisateur pour le jeu de données Phrase principale
+Résultat du code utilisateur: 2
+Validation réussie pour le jeu de données Phrase principale.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 1
+Résultat du code utilisateur: 7
+Validation réussie pour le jeu de données Jeu de données caché 1.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 2
+Résultat du code utilisateur: -1
+Validation réussie pour le jeu de données Jeu de données caché 2.
+Fin de l'exercice

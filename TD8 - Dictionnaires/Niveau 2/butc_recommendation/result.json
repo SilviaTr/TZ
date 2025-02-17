@@ -1,0 +1,112 @@
+{
+    "success": False,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Test 1",
+            "input_data": {
+                "livres": [
+                    {"titre": "Harry Potter", "auteur": "J.K. Rowling", "genre": "Fantasy", "pages": 500, "longueur": "moyen"},
+                    {"titre": "Le Petit Prince", "auteur": "Antoine de Saint-Exupéry", "genre": "Fiction", "pages": 96, "longueur": "court"},
+                    {"titre": "1984", "auteur": "George Orwell", "genre": "Fiction", "pages": 328, "longueur": "moyen"},
+                    {"titre": "Python pour les Nuls", "auteur": "John Paul Mueller", "genre": "Informatique", "pages": 432, "longueur": "moyen"},
+                    {"titre": "L'Étranger", "auteur": "Albert Camus", "genre": "Littérature", "pages": 123, "longueur": "court"},
+                    {"titre": "Le Seigneur des Anneaux", "auteur": "J.R.R. Tolkien", "genre": "Fantasy", "pages": 1216, "longueur": "long"},
+                    {"titre": "Animal Farm", "auteur": "George Orwell", "genre": "Fiction", "pages": 112, "longueur": "court"}
+                ],
+                "params": ['Fiction', 'George Orwell', 'court']
+            },
+            "hidden": False,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": "Le Petit Prince",
+            "impact": 10
+        },
+        {
+            "name": "Test 2",
+            "input_data": {
+                "livres": [
+                    {"titre": "Harry Potter", "auteur": "J.K. Rowling", "genre": "Fantasy", "pages": 500, "longueur": "moyen"},
+                    {"titre": "Le Petit Prince", "auteur": "Antoine de Saint-Exupéry", "genre": "Fiction", "pages": 96, "longueur": "court"},
+                    {"titre": "1984", "auteur": "George Orwell", "genre": "Fiction", "pages": 328, "longueur": "moyen"},
+                    {"titre": "Python pour les Nuls", "auteur": "John Paul Mueller", "genre": "Informatique", "pages": 432, "longueur": "moyen"},
+                    {"titre": "L'Étranger", "auteur": "Albert Camus", "genre": "Littérature", "pages": 123, "longueur": "court"},
+                    {"titre": "Le Seigneur des Anneaux", "auteur": "J.R.R. Tolkien", "genre": "Fantasy", "pages": 1216, "longueur": "long"},
+                    {"titre": "Animal Farm", "auteur": "George Orwell", "genre": "Fiction", "pages": 112, "longueur": "court"}
+                ],
+                "params": ['Art', 'George Orwell', 'long']
+            },
+            "hidden": True,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": "1984",
+            "impact": 10
+        },
+        {
+            "name": "Test 3",
+            "input_data": {
+                "livres": [
+                    {"titre": "Harry Potter", "auteur": "J.K. Rowling", "genre": "Fantasy", "pages": 500, "longueur": "moyen"},
+                    {"titre": "Le Petit Prince", "auteur": "Antoine de Saint-Exupéry", "genre": "Fiction", "pages": 96, "longueur": "court"},
+                    {"titre": "1984", "auteur": "George Orwell", "genre": "Fiction", "pages": 328, "longueur": "moyen"},
+                    {"titre": "Python pour les Nuls", "auteur": "John Paul Mueller", "genre": "Informatique", "pages": 432, "longueur": "moyen"},
+                    {"titre": "L'Étranger", "auteur": "Albert Camus", "genre": "Littérature", "pages": 123, "longueur": "court"},
+                    {"titre": "Le Seigneur des Anneaux", "auteur": "J.R.R. Tolkien", "genre": "Fantasy", "pages": 1216, "longueur": "long"},
+                    {"titre": "Animal Farm", "auteur": "George Orwell", "genre": "Fiction", "pages": 112, "longueur": "court"}
+                ],
+                "params": ['Art', 'Recueil', 'long']
+            },
+            "hidden": True,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": "Le Seigneur des Anneaux",
+            "impact": 10
+        },
+        {
+            "name": "Test 4",
+            "input_data": {
+                "livres": [
+                    {"titre": "Harry Potter", "auteur": "J.K. Rowling", "genre": "Fantasy", "pages": 500, "longueur": "moyen"},
+                    {"titre": "Le Petit Prince", "auteur": "Antoine de Saint-Exupéry", "genre": "Fiction", "pages": 96, "longueur": "court"},
+                    {"titre": "1984", "auteur": "George Orwell", "genre": "Fiction", "pages": 328, "longueur": "moyen"},
+                    {"titre": "Python pour les Nuls", "auteur": "John Paul Mueller", "genre": "Informatique", "pages": 432, "longueur": "moyen"},
+                    {"titre": "L'Étranger", "auteur": "Albert Camus", "genre": "Littérature", "pages": 123, "longueur": "court"},
+                    {"titre": "Le Seigneur des Anneaux", "auteur": "J.R.R. Tolkien", "genre": "Fantasy", "pages": 1216, "longueur": "long"},
+                    {"titre": "Animal Farm", "auteur": "George Orwell", "genre": "Fiction", "pages": 112, "longueur": "court"}
+                ],
+                "params": ['Art', 'Recueil', 'très court']
+            },
+            "hidden": True,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": "Aucun livre ne correspond à vos préférences",
+            "impact": 10
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de get()",
+            "validation": False,
+            "message": "Vous avez utilisé la fonction get. L'exercice n'est pas validé",
+            "impact": 20
+        },
+        {
+            "name": "Nombre de if",
+            "validation": False,
+            "message": "Vous avez utilisé trop de if. Vous perdez 1 point",
+            "impact": 1
+        }
+    ],
+    "bonus": [
+        {
+            "name": "Moins de 3 for",
+            "validation": False,
+            "message": "Vous avez réussi l'exercice avec moins de 3 for, +1 point !",
+            "impact": 1
+        }
+    ],
+    "console": {
+        "type": None,
+        "message": []
+    }
+}

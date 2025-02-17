@@ -1,0 +1,39 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Granger",
+            "data": [
+                "Granger",
+                "Brown",
+                "Finnigan",
+                "Potter",
+                "Thomas",
+                "Malefoy",
+                "Londubat",
+                "Patil",
+                "Weasley",
+                "Goyle",
+                "Crabbe"
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": 1,
+            "correction": 1,
+            "impact": 10
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de numpy",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la biblioth\u00e8que numpy. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        }
+    ],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}

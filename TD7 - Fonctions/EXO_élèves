@@ -1,0 +1,55 @@
+'''
+Gestion des Étudiants
+----------------------
+Dans cet exercice, tu vas créer un programme qui gère une liste d'étudiants et leurs notes.
+Le programme permettra d'ajouter des étudiants, de les afficher, et de calculer la moyenne des notes.
+
+
+Indices :
+1. Crée une fonction `ajouter_etudiant(nom, note)` qui ajoute un étudiant à une liste et renvoie la liste mise à jour.
+2. Crée une fonction `afficher_etudiants(etudiants)` qui affiche la liste des étudiants. Utilise `print` pour cela.
+3. Crée une fonction `calculer_moyenne(etudiants)` qui calcule la moyenne des notes des étudiants et utilise `return` pour renvoyer cette valeur.
+4. Dans le programme principal, appelle ces fonctions et affiche les résultats.
+'''
+
+
+# Définition des fonctions
+
+# Liste pour stocker les étudiants
+etudiants = []
+
+def ajouter_etudiant(nom, note):
+    '''Ajoute un étudiant à la liste et renvoie la liste mise à jour.'''
+    # Indice 1 : Utilise return pour renvoyer la liste mise à jour
+    etudiants.append((nom, note))
+    return etudiants
+
+def afficher_etudiants(etudiants):
+    '''Affiche la liste des étudiants.'''
+    # Indice 2 : Utilise print pour afficher les étudiants
+    print("Liste des étudiants et leurs notes :")
+    for etudiant in etudiants:
+        print(f"Étudiant : {etudiant[0]}, Note : {etudiant[1]}")
+
+def calculer_moyenne(etudiants):
+    '''Calcule la moyenne des notes et renvoie cette valeur.'''
+    # Indice 3 : Utilise return pour renvoyer la moyenne
+    if not etudiants:  # Vérifie si la liste est vide
+        return 0
+    
+    total_notes = sum(note for _, note in etudiants)
+    return total_notes / len(etudiants)
+
+# Programme principal
+
+# Ajout d'étudiants
+ajouter_etudiant("Inès", 85)
+ajouter_etudiant("Quentin", 90)
+ajouter_etudiant("Laura", 78)
+
+# Afficher les étudiants
+afficher_etudiants(etudiants)
+
+# Calculer et afficher la moyenne des notes
+moyenne = calculer_moyenne(etudiants)
+print(f"\nMoyenne des notes : {moyenne}")

@@ -1,0 +1,23 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Tableau original', 'L': [12, 45, 78, 23, 56, 89, 34, 67, 90, 123, 234, 345, 456, 567, 678, 765, 654, 543, 432, 321, 210, 109, 98, 87, 62, 65], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 15120560, 'impact': 10}, {'name': '2ème tableau (caché)', 'L': [12, 45, 78, -23, 56, 89, 34, 67, 90, 123, 4, 345, 456, 567, 678, 0, 654, 543, 432, 321, 210, 109, 98, 87, 62, 65], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 15120560, 'impact': 5}, {'name': '2ème tableau (caché)', 'L': [12, 45, 78, 23, 56, 89, -34, 67, 90, 19990, 234, 345, 456, 567, 678, 765, 654, 543.8, 432, 1, 210, 109, 98, 87, 62, 65], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 15120560, 'impact': 5}]
+Code utilisateur: 
+def produit(input):
+     produit = 1
+     for i in input:
+          if 50 <=  i <= 70 :
+               produit *= i
+     return produit
+output = produit(L)
+print(output)
+
+Exécution du code utilisateur pour le jeu de données Tableau original
+Résultat du code utilisateur: 15120560
+Validation réussie pour le jeu de données Tableau original.
+Exécution du code utilisateur pour le jeu de données 2ème tableau (caché)
+Résultat du code utilisateur: 15120560
+Validation réussie pour le jeu de données 2ème tableau (caché).
+Exécution du code utilisateur pour le jeu de données 2ème tableau (caché)
+Résultat du code utilisateur: 15120560
+Validation réussie pour le jeu de données 2ème tableau (caché).
+Fin de l'exercice

@@ -1,0 +1,62 @@
+{
+    "success": False,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Livres principaux",
+            "input_data": [
+                {"titre": "Harry Potter", "auteur": "J.K. Rowling", "categorie": "Fantastique", "note_moyenne": 4.9, "votes": 1000000, "annee": 1997}, 
+                {"titre": "Le Petit Prince", "auteur": "Antoine de Saint-Exupéry", "categorie": "Fiction", "note_moyenne": 4.8, "votes": 500000, "annee": 1943}, 
+                {"titre": "1984", "auteur": "George Orwell", "categorie": "Fiction", "note_moyenne": 4.8, "votes": 600000, "annee": 1949}, 
+                {"titre": "Python pour les Nuls", "auteur": "John Paul Mueller", "categorie": "Informatique", "note_moyenne": 4.5, "votes": 250000, "annee": 2015}, 
+                {"titre": "L'Étranger", "auteur": "Albert Camus", "categorie": "Littérature", "note_moyenne": 4.3, "votes": 300000, "annee": 1942}, 
+                {"titre": "Le Seigneur des Anneaux", "auteur": "J.R.R. Tolkien", "categorie": "Fantastique", "note_moyenne": 4.9, "votes": 800000, "annee": 1954}, 
+                {"titre": "La Ferme des Animaux", "auteur": "George Orwell", "categorie": "Fiction", "note_moyenne": 4.7, "votes": 400000, "annee": 1945}
+            ],
+            "hidden": False,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": {
+                'Fantastique': {'titre': 'Harry Potter', 'auteur': 'J.K. Rowling', 'categorie': 'Fantastique', 'note_moyenne': 4.9, 'votes': 1000000, 'annee': 1997}, 
+                'Fiction': {'titre': '1984', 'auteur': 'George Orwell', 'categorie': 'Fiction', 'note_moyenne': 4.8, 'votes': 600000, 'annee': 1949}, 
+                'Informatique': {'titre': 'Python pour les Nuls', 'auteur': 'John Paul Mueller', 'categorie': 'Informatique', 'note_moyenne': 4.5, 'votes': 250000, 'annee': 2015}, 
+                'Littérature': {'titre': "L'Étranger", 'auteur': 'Albert Camus', 'categorie': 'Littérature', 'note_moyenne': 4.3, 'votes': 300000, 'annee': 1942}
+            },
+            "impact": 15
+        },
+        {
+            "name": "Jeu de données caché",
+            "input_data": [
+                {"titre": "Dune", "auteur": "Frank Herbert", "categorie": "Science-fiction", "note_moyenne": 4.9, "votes": 200000, "annee": 1965},
+                {"titre": "Fondation", "auteur": "Isaac Asimov", "categorie": "Science-fiction", "note_moyenne": 4.9, "votes": 250000, "annee": 1951},
+                {"titre": "Fahrenheit 451", "auteur": "Ray Bradbury", "categorie": "Science-fiction", "note_moyenne": 4.9, "votes": 250000, "annee": 1953},
+                {"titre": "La Guerre des mondes", "auteur": "H. G. Wells", "categorie": "Science-fiction", "note_moyenne": 4.8, "votes": 300000, "annee": 1898}
+            ],
+            "hidden": True,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": {'Science-fiction': {'titre': 'Fondation', 'auteur': 'Isaac Asimov', 'categorie': 'Science-fiction', 'note_moyenne': 4.9, 'votes': 250000, 'annee': 1951}},
+            "impact": 5
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de sorted()",
+            "validation": False,
+            "message": "Vous avez utilisé la fonction sorted. L'exercice n'est pas validé.",
+            "impact": 20
+        }
+    ],
+    "bonus": [
+        {
+            "name": "Moins de 3 boucles",
+            "validation": False,
+            "message": "Vous avez réussi l'exercice avec moins de 3 boucles, +1 point !",
+            "impact": 1
+        }
+    ],
+    "console": {
+        "type": None,
+        "message": []
+    }
+}

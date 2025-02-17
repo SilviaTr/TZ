@@ -1,0 +1,20 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Armors', 'data': [('Mark I', 25), ('Mark II', 50), ('Mark III', 100), ('Mark IV', 120), ('Mark V', 90), ('Mark VI', 150), ('Mark VII', 180), ('Mark XLII', 210), ('Mark L', 250), ('Mark LXXXV', 300), ('Hulkbuster (Mark XLIV)', 350), ('Rescue', 210)], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': (2035, [('Mark III', 100), ('Mark IV', 120), ('Mark VI', 150), ('Mark VII', 180)]), 'impact': 10}, {'name': 'Armors 2 (cachés)', 'data': [('Mark I', 250), ('Mark II', 500), ('Mark III', 10), ('Mark IV', 120), ('Mark V', 90), ('Mark VI', 150), ('Mark VII', 80), ('Mark XLII', 210), ('Mark L', 25), ('Mark LXXXV', 30), ('Hulkbuster (Mark XLIV)', 350), ('Rescue', 210)], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': (2025, [('Mark IV', 120), ('Mark VI', 150)]), 'impact': 10}]
+Code utilisateur: 
+def armure(armors):
+    somme = sum(armor[1] for armor in armors)
+    armors = [armor for armor in armors if 100 <= armor[1] <= 200]
+    return somme, armors
+
+output = armure(input)
+print(output)
+
+Contrainte respectée: {'name': 'Pas de numpy', 'validation': True, 'message': "Vous avez utilisé la bibliothèque numpy. L'exercice n'est pas validé", 'impact': 20}
+Exécution du code utilisateur pour le jeu de données Armors
+Résultat du code utilisateur: (2035, [('Mark III', 100), ('Mark IV', 120), ('Mark VI', 150), ('Mark VII', 180)])
+Validation réussie pour le jeu de données Armors.
+Exécution du code utilisateur pour le jeu de données Armors 2 (cachés)
+Résultat du code utilisateur: (2025, [('Mark IV', 120), ('Mark VI', 150)])
+Validation réussie pour le jeu de données Armors 2 (cachés).
+Fin de l'exercice

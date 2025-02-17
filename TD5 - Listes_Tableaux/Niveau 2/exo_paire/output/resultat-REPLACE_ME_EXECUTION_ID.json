@@ -1,0 +1,92 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Echiquier",
+            "data": [
+                2,
+                62,
+                13,
+                98,
+                80,
+                85,
+                77,
+                64,
+                83,
+                27,
+                45,
+                21,
+                28,
+                8,
+                82,
+                26,
+                87,
+                69,
+                85,
+                20,
+                41,
+                16,
+                11,
+                55,
+                43,
+                68,
+                96,
+                94,
+                52,
+                68
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": [
+                2,
+                62,
+                98,
+                80,
+                64,
+                28,
+                8,
+                82,
+                26,
+                20,
+                16,
+                68,
+                96,
+                94,
+                52,
+                68
+            ],
+            "correction": [
+                2,
+                62,
+                98,
+                80,
+                64,
+                28,
+                8,
+                82,
+                26,
+                20,
+                16,
+                68,
+                96,
+                94,
+                52,
+                68
+            ],
+            "impact": 20
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de remove",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la biblioth\u00e8que remove. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        }
+    ],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}

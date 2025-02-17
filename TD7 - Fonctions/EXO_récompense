@@ -1,0 +1,30 @@
+'''
+
+Dans cet exercice, tu vas créer un programme qui décerne une récompense à un joueur en fonction de son score.
+Le programme demandera à l'utilisateur d'entrer un score, puis déterminera si le joueur a gagné une récompense.
+
+Indices :
+1. Crée une fonction `decerner_recompense(score)` qui retourne "Bravo, vous avez gagné !" si le score est supérieur ou égal à 100, sinon retourne "Désolé, vous n'avez pas gagné.".
+2. Dans la fonction principale, demande à l'utilisateur d'entrer son score.
+3. Affiche le message de récompense en utilisant `print` pour afficher le résultat de la fonction `decerner_recompense`.
+'''
+
+# Définition de la fonction
+
+def decerner_recompense(score):
+    '''Retourne un message de récompense en fonction du score.'''
+    if score >= 100:
+        return "Bravo, vous avez gagné !"
+    else:
+        return "Désolé, vous n'avez pas gagné."
+
+# Programme principal
+
+# Demande à l'utilisateur d'entrer son score
+score_utilisateur = int(input("Entrez votre score : "))
+
+# Appelle la fonction pour obtenir le message de récompense
+message_recompense = decerner_recompense(score_utilisateur)
+
+# Utilise print pour afficher le message de récompense
+print(message_recompense)

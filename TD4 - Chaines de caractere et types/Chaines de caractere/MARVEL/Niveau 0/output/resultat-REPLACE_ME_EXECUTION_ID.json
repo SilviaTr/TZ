@@ -1,0 +1,65 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Phrase \u00e0 inverser",
+            "data": ".sonahT ertnoc tnettab es aciremA niatpaC te naM norI",
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": "Iron Man et Captain America se battent contre Thanos.",
+            "correction": "Iron Man et Captain America se battent contre Thanos.",
+            "impact": 15
+        },
+        {
+            "name": "Jeu de donn\u00e9es cach\u00e9 1",
+            "data": ".dragsA reg\u00e9torp ruop uaetram nos esilitu rohT",
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": "Thor utilise son marteau pour prot\u00e9ger Asgard.",
+            "correction": "Thor utilise son marteau pour prot\u00e9ger Asgard.",
+            "impact": 3
+        },
+        {
+            "name": "Jeu de donn\u00e9es cach\u00e9 2",
+            "data": ".ardyH'l ed e\u00e9mra'l ertnoc tnettab es eyekwaH te wodiW kcalB",
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": "Black Widow et Hawkeye se battent contre l'arm\u00e9e de l'Hydra.",
+            "correction": "Black Widow et Hawkeye se battent contre l'arm\u00e9e de l'Hydra.",
+            "impact": 2
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de reversed",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la fonction reversed. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        },
+        {
+            "name": "Trop de for",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 trop de for. Vous perdez 5 points",
+            "impact": 5
+        },
+        {
+            "name": "Inversion par slicing",
+            "validation": true,
+            "message": "Vous n'avez pas utilis\u00e9 le slicing pour inverser la cha\u00eene. L'exercice n'est pas valid\u00e9.",
+            "impact": 10
+        }
+    ],
+    "bonus": [
+        {
+            "name": "Code optimis\u00e9",
+            "validation": false,
+            "message": "Votre code est optimis\u00e9 et utilise peu de variables, +2 points !",
+            "impact": 1
+        }
+    ],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}

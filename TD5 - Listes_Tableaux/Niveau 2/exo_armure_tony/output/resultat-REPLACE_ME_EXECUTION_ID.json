@@ -1,0 +1,198 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Armors",
+            "data": [
+                [
+                    "Mark I",
+                    25
+                ],
+                [
+                    "Mark II",
+                    50
+                ],
+                [
+                    "Mark III",
+                    100
+                ],
+                [
+                    "Mark IV",
+                    120
+                ],
+                [
+                    "Mark V",
+                    90
+                ],
+                [
+                    "Mark VI",
+                    150
+                ],
+                [
+                    "Mark VII",
+                    180
+                ],
+                [
+                    "Mark XLII",
+                    210
+                ],
+                [
+                    "Mark L",
+                    250
+                ],
+                [
+                    "Mark LXXXV",
+                    300
+                ],
+                [
+                    "Hulkbuster (Mark XLIV)",
+                    350
+                ],
+                [
+                    "Rescue",
+                    210
+                ]
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": [
+                2035,
+                [
+                    [
+                        "Mark III",
+                        100
+                    ],
+                    [
+                        "Mark IV",
+                        120
+                    ],
+                    [
+                        "Mark VI",
+                        150
+                    ],
+                    [
+                        "Mark VII",
+                        180
+                    ]
+                ]
+            ],
+            "correction": [
+                2035,
+                [
+                    [
+                        "Mark III",
+                        100
+                    ],
+                    [
+                        "Mark IV",
+                        120
+                    ],
+                    [
+                        "Mark VI",
+                        150
+                    ],
+                    [
+                        "Mark VII",
+                        180
+                    ]
+                ]
+            ],
+            "impact": 10
+        },
+        {
+            "name": "Armors 2 (cach\u00e9s)",
+            "data": [
+                [
+                    "Mark I",
+                    250
+                ],
+                [
+                    "Mark II",
+                    500
+                ],
+                [
+                    "Mark III",
+                    10
+                ],
+                [
+                    "Mark IV",
+                    120
+                ],
+                [
+                    "Mark V",
+                    90
+                ],
+                [
+                    "Mark VI",
+                    150
+                ],
+                [
+                    "Mark VII",
+                    80
+                ],
+                [
+                    "Mark XLII",
+                    210
+                ],
+                [
+                    "Mark L",
+                    25
+                ],
+                [
+                    "Mark LXXXV",
+                    30
+                ],
+                [
+                    "Hulkbuster (Mark XLIV)",
+                    350
+                ],
+                [
+                    "Rescue",
+                    210
+                ]
+            ],
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": [
+                2025,
+                [
+                    [
+                        "Mark IV",
+                        120
+                    ],
+                    [
+                        "Mark VI",
+                        150
+                    ]
+                ]
+            ],
+            "correction": [
+                2025,
+                [
+                    [
+                        "Mark IV",
+                        120
+                    ],
+                    [
+                        "Mark VI",
+                        150
+                    ]
+                ]
+            ],
+            "impact": 10
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de numpy",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la biblioth\u00e8que numpy. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        }
+    ],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}

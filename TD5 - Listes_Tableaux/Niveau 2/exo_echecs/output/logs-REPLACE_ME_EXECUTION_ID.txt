@@ -1,0 +1,17 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Echiquier', 'data': [['-', '-', 'R', 'T', '-', '-', '-', '-'], ['-', '-', '-', 'P', '-', '-', '-', '-'], ['F', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', 'F', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', 'R', '-', '-', '-', '_', '-']], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': [['-', '-', 'R', 'T', '-', '-', '-', '-'], ['-', '-', '-', 'P', '-', '-', '-', '-'], ['F', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', 'F', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', 'R', '-', '-', '-', '_', '-']], 'impact': 20}]
+Code utilisateur: 
+def echecs(echiquier):
+    tmp = echiquier[5][3]
+    echiquier[5][3] = echiquier[2][0]
+    echiquier[2][0] = tmp
+    return echiquier
+
+output = echecs(input)
+print(output)
+
+Exécution du code utilisateur pour le jeu de données Echiquier
+Résultat du code utilisateur: [['-', '-', 'R', 'T', '-', '-', '-', '-'], ['-', '-', '-', 'P', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', 'F', '-', '-'], ['-', '-', '-', 'F', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-', '-', '-'], ['-', '-', 'R', '-', '-', '-', '_', '-']]
+Validation réussie pour le jeu de données Echiquier.
+Fin de l'exercice

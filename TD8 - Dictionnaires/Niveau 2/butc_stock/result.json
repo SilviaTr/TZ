@@ -1,0 +1,73 @@
+{
+    "success": False,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Inventaire principal",
+            "input_data": [
+                "Fiction",
+                "Informatique",
+                "Littérature",
+                "Fantasy",
+                "Informatique",
+                "Fiction",
+                "Fantasy",
+                "Littérature",
+                "Fiction",
+                "Informatique",
+                "Fantasy",
+                "Fiction",
+            ],
+            "hidden": False,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": {
+                "Fiction": 4,
+                "Informatique": 3,
+                "Littérature": 2,
+                "Fantasy": 3
+            },
+            "impact": 15
+        },
+        {
+            "name": "Jeu de données caché",
+            "input_data": [
+                "Science",
+                "Histoire",
+                "Science",
+                "Fiction",
+                "Histoire",
+                "Science"
+            ],
+            "hidden": True,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": {
+                "Science": 3,
+                "Histoire": 2,
+                "Fiction": 1
+            },
+            "impact": 5
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de get()",
+            "validation": False,
+            "message": "Vous avez utilisé la fonction get. L'exercice n'est pas validé.",
+            "impact": 20
+        }
+    ],
+    "bonus": [
+        {
+            "name": "Moins de 2 boucles",
+            "validation": False,
+            "message": "Vous avez réussi l'exercice avec moins de 2 boucles, +3 points !",
+            "impact": 1
+        }
+    ],
+    "console": {
+        "type": None,
+        "message": []
+    }
+}

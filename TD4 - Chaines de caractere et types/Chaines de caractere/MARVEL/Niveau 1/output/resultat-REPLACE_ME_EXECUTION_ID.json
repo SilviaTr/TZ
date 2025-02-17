@@ -1,0 +1,80 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Phrase principale",
+            "data": {
+                "texte": "Les Avengers se pr\u00e9parent \u00e0 combattre une invasion extraterrestre men\u00e9e par Thanos et ses sbires",
+                "carac_a_trouver": "e"
+            },
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": 2,
+            "correction": 2,
+            "impact": 15
+        },
+        {
+            "name": "Jeu de donn\u00e9es cach\u00e9 1",
+            "data": {
+                "texte": "Expelliarmus",
+                "carac_a_trouver": "i"
+            },
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": 7,
+            "correction": 7,
+            "impact": 3
+        },
+        {
+            "name": "Jeu de donn\u00e9es cach\u00e9 2",
+            "data": {
+                "texte": "Aloxhomora",
+                "carac_a_trouver": "z"
+            },
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": -1,
+            "correction": -1,
+            "impact": 2
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de find",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la m\u00e9thode find, ce qui contourne l'objectif de l'exercice.",
+            "impact": 20
+        },
+        {
+            "name": "Pas de index",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la m\u00e9thode index, ce qui contourne l'objectif de l'exercice.",
+            "impact": 20
+        },
+        {
+            "name": "Trop de if",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 trop de if. Limitez-vous \u00e0 2 conditions maximum.",
+            "impact": 3
+        }
+    ],
+    "bonus": [
+        {
+            "name": "Une seule boucle",
+            "validation": true,
+            "message": "Vous avez r\u00e9solu l'exercice avec une seule boucle, +1 points !",
+            "impact": 1
+        },
+        {
+            "name": "Gestion des cas invalides",
+            "validation": true,
+            "message": "Votre code g\u00e8re correctement les entr\u00e9es invalides, +1 points !",
+            "impact": 1
+        }
+    ],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}

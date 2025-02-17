@@ -1,0 +1,25 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'ordre_attaque', 'data': ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p'], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p'], 'impact': 14}, {'name': 'Jeu de données caché 1', 'data': ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p'], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p'], 'impact': 3}, {'name': 'Jeu de données caché 2', 'data': ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p'], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p'], 'impact': 3}]
+Code utilisateur: 
+def remplacement(lettres):
+    for k in range(len(lettres)):
+        if lettres[k] == 'c':
+            lettres[k] = 'w'
+    return lettres
+
+output = remplacement(input)
+print(output)
+
+Contrainte respectée: {'name': 'Pas de append', 'validation': True, 'message': "Vous avez utilisé la fonction append. L'exercice n'est pas validé", 'impact': 20}
+Contrainte respectée: {'name': 'Pas de remove', 'validation': True, 'message': "Vous avez utilisé la fonction remove. L'exercice n'est pas validé", 'impact': 15}
+Exécution du code utilisateur pour le jeu de données ordre_attaque
+Résultat du code utilisateur: ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p']
+Validation réussie pour le jeu de données ordre_attaque.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 1
+Résultat du code utilisateur: ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p']
+Validation réussie pour le jeu de données Jeu de données caché 1.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 2
+Résultat du code utilisateur: ['a', 'b', 'w', 'd', 'u', 'v', 'w', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'w', 'x', 'y', 'z', 'w', 'w', 'x', 'y', 'n', 'o', 'p']
+Validation réussie pour le jeu de données Jeu de données caché 2.
+Fin de l'exercice

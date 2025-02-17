@@ -1,0 +1,25 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Liste originale', 'data': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 40, 30, 50], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': [1, 4, 7, 10, 30], 'impact': 10}, {'name': 'Liste 2 (cachée)', 'data': [-10, -5, 0, 5, 10, 15, 20, 25, 30, 35, 40, 45], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': [-10, 5, 20, 35], 'impact': 5}, {'name': 'Liste 3 (cachée)', 'data': ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n'], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': ['a', 'd', 'g', 'j', 'm'], 'impact': 5}]
+Code utilisateur: 
+def periodique(input):
+    nouvelle_liste = []
+    for i in range(len(input)):
+        if i % 3 == 0:
+            nouvelle_liste += [input[i]]
+    return nouvelle_liste
+
+output=periodique(input)
+print(output)
+
+Contrainte respectée: {'name': 'Pas de numpy', 'validation': True, 'message': "Vous avez utilisé la bibliothèque numpy. L'exercice n'est pas validé", 'impact': 20}
+Exécution du code utilisateur pour le jeu de données Liste originale
+Résultat du code utilisateur: [1, 4, 7, 10, 30]
+Validation réussie pour le jeu de données Liste originale.
+Exécution du code utilisateur pour le jeu de données Liste 2 (cachée)
+Résultat du code utilisateur: [-10, 5, 20, 35]
+Validation réussie pour le jeu de données Liste 2 (cachée).
+Exécution du code utilisateur pour le jeu de données Liste 3 (cachée)
+Résultat du code utilisateur: ['a', 'd', 'g', 'j', 'm']
+Validation réussie pour le jeu de données Liste 3 (cachée).
+Fin de l'exercice

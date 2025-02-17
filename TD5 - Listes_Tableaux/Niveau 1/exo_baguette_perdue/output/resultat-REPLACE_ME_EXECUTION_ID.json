@@ -1,0 +1,80 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Pi\u00e8ce 1",
+            "data": [
+                "armoire",
+                "chapeau",
+                "grimoire",
+                "baguette",
+                "lit",
+                "valise"
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": true,
+            "correction": true,
+            "impact": 10
+        },
+        {
+            "name": "Pi\u00e8ce 2",
+            "data": [
+                "baguettes",
+                "bureau",
+                "plume",
+                "plante",
+                "etagere"
+            ],
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": false,
+            "correction": false,
+            "impact": 5
+        },
+        {
+            "name": "Pi\u00e8ce 3",
+            "data": [
+                "chaudron",
+                "potion",
+                "boule de cristal",
+                "fiole",
+                "bois",
+                "cage",
+                "tabouret"
+            ],
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": false,
+            "correction": false,
+            "impact": 5
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de in",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 in. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        },
+        {
+            "name": "Pas de break",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 break. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        }
+    ],
+    "bonus": [
+        {
+            "name": "Utilisation de any",
+            "validation": false,
+            "message": "Vous avez utilis\u00e9 la fonction any(). La code est optimis\u00e9, vous remportez 5 points bonus !",
+            "impact": 5
+        }
+    ],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}

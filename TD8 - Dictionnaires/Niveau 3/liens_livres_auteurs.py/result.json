@@ -1,0 +1,83 @@
+{
+    "success": False,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Genre de prédilection",
+            "input_data": {"livres": [
+                {"titre": "Harry Potter", "auteur": "J.K. Rowling", "genre": "Fantasy", "pages": 500},
+                {"titre": "Le Petit Prince", "auteur": "Antoine de Saint-Exupéry", "genre": "Fiction", "pages": 96},
+                {"titre": "1984", "auteur": "George Orwell", "genre": "Fiction", "pages": 328},
+                {"titre": "Python pour les Nuls", "auteur": "John Paul Mueller", "genre": "Informatique", "pages": 432},
+                {"titre": "L'Étranger", "auteur": "Albert Camus", "genre": "Littérature", "pages": 123},
+                {"titre": "Le Seigneur des Anneaux", "auteur": "J.R.R. Tolkien", "genre": "Fantasy", "pages": 1216},
+                {"titre": "Animal Farm", "auteur": "George Orwell", "genre": "Fiction", "pages": 112},
+            ], "auteur": "J.K. Rowling"},
+            "hidden": False,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": "Fantasy",
+            "impact": 6
+        },
+        {
+            "name": "Auteur de Fiction",
+            "input_data": {"livres": [
+                {"titre": "Harry Potter", "auteur": "J.K. Rowling", "genre": "Fantasy", "pages": 500},
+                {"titre": "Le Petit Prince", "auteur": "Antoine de Saint-Exupéry", "genre": "Fiction", "pages": 96},
+                {"titre": "1984", "auteur": "George Orwell", "genre": "Fiction", "pages": 328},
+                {"titre": "Python pour les Nuls", "auteur": "John Paul Mueller", "genre": "Informatique", "pages": 432},
+                {"titre": "L'Étranger", "auteur": "Albert Camus", "genre": "Littérature", "pages": 123},
+                {"titre": "Le Seigneur des Anneaux", "auteur": "J.R.R. Tolkien", "genre": "Fantasy", "pages": 1216},
+                {"titre": "Animal Farm", "auteur": "George Orwell", "genre": "Fiction", "pages": 112},
+            ]},
+            "hidden": False,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": "George Orwell",
+            "impact": 6
+        },
+        {
+            "name": "Auteur des livres les plus longs",
+            "input_data": {"livres": [
+                {"titre": "Harry Potter", "auteur": "J.K. Rowling", "genre": "Fantasy", "pages": 500},
+                {"titre": "Le Petit Prince", "auteur": "Antoine de Saint-Exupéry", "genre": "Fiction", "pages": 96},
+                {"titre": "1984", "auteur": "George Orwell", "genre": "Fiction", "pages": 328},
+                {"titre": "Python pour les Nuls", "auteur": "John Paul Mueller", "genre": "Informatique", "pages": 432},
+                {"titre": "L'Étranger", "auteur": "Albert Camus", "genre": "Littérature", "pages": 123},
+                {"titre": "Le Seigneur des Anneaux", "auteur": "J.R.R. Tolkien", "genre": "Fantasy", "pages": 1216},
+                {"titre": "Animal Farm", "auteur": "George Orwell", "genre": "Fiction", "pages": 112},
+            ]},
+            "hidden": False,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": "J.R.R. Tolkien",
+            "impact": 8
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de get()",
+            "validation": False,
+            "message": "Vous avez utilisé la fonction get. L'exercice n'est pas validé.",
+            "impact": 20
+        },
+        {
+            "name": "Pas de max()",
+            "validation": False,
+            "message": "Vous avez utilisé la fonction max. L'exercice n'est pas validé.",
+            "impact": 20
+        }
+    ],
+    "bonus": [
+        {
+            "name": "Moins de 3 boucles",
+            "validation": False,
+            "message": "Vous avez réussi l'exercice avec moins de 3 boucles, +3 points !",
+            "impact": 1
+        }
+    ],
+    "console": {
+        "type": None,
+        "message": []
+    }
+}

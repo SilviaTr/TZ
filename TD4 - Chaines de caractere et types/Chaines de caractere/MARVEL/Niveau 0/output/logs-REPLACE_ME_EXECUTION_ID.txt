@@ -1,0 +1,18 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Phrase à inverser', 'data': '.sonahT ertnoc tnettab es aciremA niatpaC te naM norI', 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 'Iron Man et Captain America se battent contre Thanos.', 'impact': 15}, {'name': 'Jeu de données caché 1', 'data': '.dragsA regétorp ruop uaetram nos esilitu rohT', 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': 'Thor utilise son marteau pour protéger Asgard.', 'impact': 3}, {'name': 'Jeu de données caché 2', 'data': ".ardyH'l ed eémra'l ertnoc tnettab es eyekwaH te wodiW kcalB", 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': "Black Widow et Hawkeye se battent contre l'armée de l'Hydra.", 'impact': 2}]
+Code utilisateur: def reparo(enonce):
+        return enonce[::-1]
+Contrainte respectée: {'name': 'Pas de reversed', 'validation': True, 'message': "Vous avez utilisé la fonction reversed. L'exercice n'est pas validé", 'impact': 20}
+Contrainte respectée: {'name': 'Trop de for', 'validation': True, 'message': 'Vous avez utilisé trop de for. Vous perdez 5 points', 'impact': 5}
+Contrainte respectée: {'name': 'Inversion par slicing', 'validation': True, 'message': "Vous n'avez pas utilisé le slicing pour inverser la chaîne. L'exercice n'est pas validé.", 'impact': 10}
+Exécution du code utilisateur pour le jeu de données Phrase à inverser
+Résultat du code utilisateur: Iron Man et Captain America se battent contre Thanos.
+Validation réussie pour le jeu de données Phrase à inverser.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 1
+Résultat du code utilisateur: Thor utilise son marteau pour protéger Asgard.
+Validation réussie pour le jeu de données Jeu de données caché 1.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 2
+Résultat du code utilisateur: Black Widow et Hawkeye se battent contre l'armée de l'Hydra.
+Validation réussie pour le jeu de données Jeu de données caché 2.
+Fin de l'exercice

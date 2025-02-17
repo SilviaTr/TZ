@@ -1,0 +1,24 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'planets', 'data': ['Orion', 'Scorpion', 'Cassiopeia', 'Andromède', 'Lyre', 'Cygne', 'Taureau', 'Bélier', 'Vierge', 'Lion', 'Poissons', 'Balance', 'Sagittaire', 'Verseau', 'Capricorne', 'Gémeaux', 'Cancer', 'Pégase', 'Hercule', 'Hydre', 'Mars', 'Jupiter', 'Saturne', 'Vénus', 'Mercure', 'Neptune', 'Uranus', 'Pluton', 'Terre', 'Proxima Centauri b', 'Kepler-22b', 'TRAPPIST-1e', 'GJ 1214b', 'Gliese 581g', 'HD 40307g', 'WASP-12b', 'LHS 1140b', 'Kepler-452b'], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 38, 'impact': 14}, {'name': 'Jeu de données caché 1', 'data': ['', '', '', ''], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': 4, 'impact': 3}, {'name': 'Jeu de données caché 2', 'data': [''], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': 1, 'impact': 3}]
+Code utilisateur: 
+def compteur(input):
+    nombre = 0
+    for k in input:
+        nombre += 1
+    return nombre
+output = compteur(input)
+
+Contrainte respectée: {'name': 'Pas de len', 'validation': True, 'message': "Vous avez utilisé la fonction len. L'exercice n'est pas validé", 'impact': 20}
+Contrainte non respectée: Trop de for
+Bonus Obtenu: Moins de 2 for
+Exécution du code utilisateur pour le jeu de données planets
+Résultat du code utilisateur: 38
+Validation réussie pour le jeu de données planets.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 1
+Résultat du code utilisateur: 4
+Validation réussie pour le jeu de données Jeu de données caché 1.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 2
+Résultat du code utilisateur: 1
+Validation réussie pour le jeu de données Jeu de données caché 2.
+Fin de l'exercice

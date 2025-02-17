@@ -1,0 +1,121 @@
+{
+    "success": false,
+    "note": 0,
+    "jeux_de_donnees": [
+        {
+            "name": "planets",
+            "data": [
+                "Orion",
+                "Scorpion",
+                "Cassiopeia",
+                "Androm\u00e8de",
+                "Lyre",
+                "Cygne",
+                "Taureau",
+                "B\u00e9lier",
+                "Vierge",
+                "Lion",
+                "Poissons",
+                "Balance",
+                "Sagittaire",
+                "Verseau",
+                "Capricorne",
+                "G\u00e9meaux",
+                "Cancer",
+                "P\u00e9gase",
+                "Hercule",
+                "Hydre",
+                "Mars",
+                "Jupiter",
+                "Saturne",
+                "V\u00e9nus",
+                "Mercure",
+                "Neptune",
+                "Uranus",
+                "Pluton",
+                "Terre",
+                "Proxima Centauri b",
+                "Kepler-22b",
+                "TRAPPIST-1e",
+                "GJ 1214b",
+                "Gliese 581g",
+                "HD 40307g",
+                "WASP-12b",
+                "LHS 1140b",
+                "Kepler-452b"
+            ],
+            "hidden": false,
+            "validation": false,
+            "resultat_utilisateur": null,
+            "correction": 38,
+            "impact": 14
+        },
+        {
+            "name": "Jeu de donn\u00e9es cach\u00e9 1",
+            "data": [
+                "",
+                "",
+                "",
+                ""
+            ],
+            "hidden": true,
+            "validation": false,
+            "resultat_utilisateur": null,
+            "correction": 4,
+            "impact": 3
+        },
+        {
+            "name": "Jeu de donn\u00e9es cach\u00e9 2",
+            "data": [
+                ""
+            ],
+            "hidden": true,
+            "validation": false,
+            "resultat_utilisateur": null,
+            "correction": 1,
+            "impact": 3
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de len",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la fonction len. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        },
+        {
+            "name": "Trop de for",
+            "validation": false,
+            "message": "Vous avez utilis\u00e9 trop de for. Vous perdez 1 point",
+            "impact": 1
+        }
+    ],
+    "bonus": [
+        {
+            "name": "Moins de 2 for",
+            "validation": true,
+            "message": "Vous avez r\u00e9ussi l'exercice avec moins de 2 for, +3 points !",
+            "impact": 3
+        }
+    ],
+    "console": {
+        "type": "error",
+        "message": [
+            {
+                "type": "NameError",
+                "message": "name 'REPLACE_ME_CODE_UTILISATEUR' is not defined",
+                "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\fari\\Documents\\projet\\im05\\TX\\chapitre_5\\niveau_0\\exo_compteur\\cor\\template.py\", line 29, in execute_user_code\n    exec(code, restricted_globals, local_namespace)\n  File \"<string>\", line 1, in <module>\nNameError: name 'REPLACE_ME_CODE_UTILISATEUR' is not defined\n"
+            },
+            {
+                "type": "NameError",
+                "message": "name 'REPLACE_ME_CODE_UTILISATEUR' is not defined",
+                "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\fari\\Documents\\projet\\im05\\TX\\chapitre_5\\niveau_0\\exo_compteur\\cor\\template.py\", line 29, in execute_user_code\n    exec(code, restricted_globals, local_namespace)\n  File \"<string>\", line 1, in <module>\nNameError: name 'REPLACE_ME_CODE_UTILISATEUR' is not defined\n"
+            },
+            {
+                "type": "NameError",
+                "message": "name 'REPLACE_ME_CODE_UTILISATEUR' is not defined",
+                "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\fari\\Documents\\projet\\im05\\TX\\chapitre_5\\niveau_0\\exo_compteur\\cor\\template.py\", line 29, in execute_user_code\n    exec(code, restricted_globals, local_namespace)\n  File \"<string>\", line 1, in <module>\nNameError: name 'REPLACE_ME_CODE_UTILISATEUR' is not defined\n"
+            }
+        ]
+    }
+}

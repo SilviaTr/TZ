@@ -1,0 +1,23 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Listes originales', 'list_1': [31.29, 11.3, 85.39, 65.46, 2.78, 35.34, 8.91, 81.53, 87.75, 41.39, 59.09, 7.61, 5.04, 92.14, 16.94], 'list_2': [95.45, 85.83, 8.1, 71.83, 91.56, 91.93, 22.95, 45.37, 65.15, 90.09, 53.02, 74.74, 50.04, 49.89, 62.39], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 35810.4175, 'impact': 10}, {'name': '2èmes sets de listes originales (cachées)', 'list_1': [12.34, 45.67, 89.01, 23.45, 67.89, 10.11, 56.78, 90.12, 34.56, 78.9, 12.34, 56.78, 90.12, 34.56, 78.9], 'list_2': [98.76, 54.32, 10.98, 76.54, 32.1, 89.87, 43.21, 12.34, 56.78, 90.12, 12.34, 56.78, 90.12, 34.56, 78.9], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 41115.33170000001, 'impact': 5}, {'name': '2èmes sets de listes originales (cachées)', 'list_1': [4.56, 78.12, 23.98, 65.43, 87.65, 12.34, 56.78, 90.12, 34.56, 78.9, 12.34, 56.78, 90.12, 34.56, 78.9], 'list_2': [76.54, 32.1, 89.87, 43.21, 12.34, 56.78, 90.12, 34.56, 78.9, 12.34, 56.78, 90.12, 34.56, 78.9, 12.34], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 34185.86029999999, 'impact': 5}]
+Code utilisateur: 
+def produit_scalaire(input):
+    p_s = 0
+    for i in range(len(input[0])):
+        p_s += input[0][i] * input[1][i]
+    return p_s
+output = produit_scalaire((list_1,list_2))
+print(output)
+
+Contrainte respectée: {'name': 'Pas de numpy', 'validation': True, 'message': "Vous avez utilisé la bibliothèque numpy. L'exercice n'est pas validé", 'impact': 20}
+Exécution du code utilisateur pour le jeu de données Listes originales
+Résultat du code utilisateur: 35810.4175
+Validation réussie pour le jeu de données Listes originales.
+Exécution du code utilisateur pour le jeu de données 2èmes sets de listes originales (cachées)
+Résultat du code utilisateur: 41115.33170000001
+Validation réussie pour le jeu de données 2èmes sets de listes originales (cachées).
+Exécution du code utilisateur pour le jeu de données 2èmes sets de listes originales (cachées)
+Résultat du code utilisateur: 34185.86029999999
+Validation réussie pour le jeu de données 2èmes sets de listes originales (cachées).
+Fin de l'exercice

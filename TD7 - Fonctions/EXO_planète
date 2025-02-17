@@ -1,0 +1,90 @@
+'''
+Calculatrice des Planètes
+----------------------------------
+Dans cet exercice, vous allez créer une calculatrice spéciale qui effectue des opérations 
+mathématiques en tenant compte de la planète choisie par l'utilisateur. Chaque planète a un 
+facteur de gravité différent qui affecte le résultat du calcul.
+
+L'utilisateur doit saisir deux nombres, choisir une opération (addition ou multiplication), 
+et sélectionner une planète parmi : Mercure, Terre, Jupiter, et Mars. Chaque planète modifie 
+le résultat en fonction de sa gravité :
+- Mercure : bonus de 10%.
+- Terre : pas de modification.
+- Jupiter : malus de 20%.
+- Mars : bonus de 5%.
+
+
+Indices :
+1. Créez une fonction `addition(a, b)` qui retourne la somme de `a` et `b`.
+2. Créez une fonction `multiplication(a, b)` qui retourne le produit de `a` et `b`.
+3. Créez une fonction `modification_planete(planete, resultat)` qui applique un bonus ou malus
+   au résultat selon la planète choisie.
+4. Dans la fonction `calculer`, vérifiez l'opérateur :
+   - Si c'est `+`, appelez la fonction `addition`.
+   - Si c'est `*`, appelez la fonction `multiplication`.
+5. Demandez à l'utilisateur de saisir deux nombres, l'opérateur et la planète choisie.
+'''
+
+
+# Définition des fonctions
+
+def addition(a, b):
+    '''Retourne la somme de deux nombres.'''
+    return a + b
+
+def multiplication(a, b):
+    '''Retourne le produit de deux nombres.'''
+    return a * b
+
+def modification_planete(planete, resultat):
+    '''Modifie le résultat en fonction de la planète choisie.'''
+    # Indice 3 : Utiliser des conditions if/elif pour appliquer un bonus/malus selon la planète
+    if planete == "Mercure":
+        # Bonus de 10%
+        return resultat * 1.10
+    elif planete == "Terre":
+        # Pas de modification
+        return resultat
+    elif planete == "Jupiter":
+        # Malus de 20%
+        return resultat * 0.80
+    elif planete == "Mars":
+        # Bonus de 5%
+        return resultat * 1.05
+    else:
+        # Si la planète n'est pas reconnue
+        print("Planète non reconnue, pas de modification.")
+        return resultat
+
+def calculer(nombre1, nombre2, operateur, planete):
+    '''Effectue l'opération mathématique choisie et applique la modification selon la planète.'''
+    # Indice 4 : Vérifier l'opérateur et appeler la fonction appropriée
+    if operateur == "+":
+        resultat = addition(nombre1, nombre2)
+        print(f"Résultat avant modification : {resultat}")
+    elif operateur == "*":
+        resultat = multiplication(nombre1, nombre2)
+        print(f"Résultat avant modification : {resultat}")
+    else:
+        print("Opérateur non reconnu !")
+        return
+    
+    # Appliquer la modification selon la planète
+    resultat_modifie = modification_planete(planete, resultat)
+    print(f"Résultat après modification sur {planete} : {resultat_modifie}")
+
+# Programme principal
+
+# Saisie des nombres par l'utilisateur
+nombre1 = float(input("Entrez le premier nombre : "))
+nombre2 = float(input("Entrez le deuxième nombre : "))
+
+# Saisie de l'opérateur
+operateur = input("Choisissez un opérateur (+ ou *) : ")
+
+# Saisie de la planète
+planete = input("Choisissez une planète (Mercure, Terre, Jupiter, Mars) : ")
+
+# Calcul et affichage des résultats
+calculer(nombre1, nombre2, operateur, planete)
+

@@ -1,0 +1,122 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Liste originale",
+            "data": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                12,
+                40,
+                30,
+                50
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": [
+                1,
+                4,
+                7,
+                10,
+                30
+            ],
+            "correction": [
+                1,
+                4,
+                7,
+                10,
+                30
+            ],
+            "impact": 10
+        },
+        {
+            "name": "Liste 2 (cach\u00e9e)",
+            "data": [
+                -10,
+                -5,
+                0,
+                5,
+                10,
+                15,
+                20,
+                25,
+                30,
+                35,
+                40,
+                45
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": [
+                -10,
+                5,
+                20,
+                35
+            ],
+            "correction": [
+                -10,
+                5,
+                20,
+                35
+            ],
+            "impact": 5
+        },
+        {
+            "name": "Liste 3 (cach\u00e9e)",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "f",
+                "g",
+                "h",
+                "i",
+                "j",
+                "k",
+                "l",
+                "m",
+                "n"
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": [
+                "a",
+                "d",
+                "g",
+                "j",
+                "m"
+            ],
+            "correction": [
+                "a",
+                "d",
+                "g",
+                "j",
+                "m"
+            ],
+            "impact": 5
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de numpy",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la biblioth\u00e8que numpy. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        }
+    ],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}

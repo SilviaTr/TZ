@@ -1,0 +1,28 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Vecteurs', 'L': [56, 1, 21, 1, 56], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': True, 'impact': 10}, {'name': 'Vecteurs 2 (cachés)', 'L': [56, 1, 0, 1, 1, 56], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': False, 'impact': 5}, {'name': 'Vecteurs 3 (cachés)', 'L': [1, 1, 201, 56, 56], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': False, 'impact': 5}]
+Code utilisateur: 
+def symetrie(input):
+     long = len(input)
+     sym = True
+
+     for i in range (0, long//2) :
+          if input[i] !=input[len(input)-1-i] :
+               sym = False
+     return sym
+
+output = symetrie(L)
+print(output)
+
+Contrainte respectée: {'name': 'Pas de reversed()', 'validation': True, 'message': "Vous avez utilisé la fonction reversed(). L'exercice n'est pas validé", 'impact': 20}
+Contrainte respectée: {'name': "Pas de '=='", 'validation': True, 'message': "Vous avez utilisé la méthode '==' l'exercice n'est pas validé", 'impact': 20}
+Exécution du code utilisateur pour le jeu de données Vecteurs
+Résultat du code utilisateur: True
+Validation réussie pour le jeu de données Vecteurs.
+Exécution du code utilisateur pour le jeu de données Vecteurs 2 (cachés)
+Résultat du code utilisateur: False
+Validation réussie pour le jeu de données Vecteurs 2 (cachés).
+Exécution du code utilisateur pour le jeu de données Vecteurs 3 (cachés)
+Résultat du code utilisateur: False
+Validation réussie pour le jeu de données Vecteurs 3 (cachés).
+Fin de l'exercice

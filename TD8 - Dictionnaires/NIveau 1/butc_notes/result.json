@@ -1,0 +1,57 @@
+{
+    "success": False,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Test 1",
+            "input_data": {
+                "notes": {
+                    "Le Petit Prince": 9,
+                    "Python pour les Nuls": 7,
+                    "L'Étranger": 8,
+                    "Le Seigneur des Anneaux": 10,
+                    "1984": 9,
+                    "Harry Potter": 10,
+                },
+                "titre_livre": "L'Étranger"
+            },
+            "hidden": False,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": 8,
+            "impact": 10
+        },
+        {
+            "name": "Test 2",
+            "input_data": {
+                "notes": {
+                    "Le Petit Prince": 9,
+                    "Python pour les Nuls": 7,
+                    "L'Étranger": 8,
+                    "Le Seigneur des Anneaux": 10,
+                    "1984": 9,
+                    "Harry Potter": 10,
+                },
+                "titre_livre": "Le Hobbit"
+            },
+            "hidden": True,
+            "validation": False,
+            "resultat_utilisateur": "",
+            "correction": -1,
+            "impact": 10
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de get()",
+            "validation": False,
+            "message": "Vous avez utilisé la fonction get. L'exercice n'est pas validé",
+            "impact": 10
+        }
+    ],
+    "bonus": [],
+    "console": {
+        "type": None,
+        "message": []
+    }
+}

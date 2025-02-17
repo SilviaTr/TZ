@@ -1,0 +1,26 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Liste initiale', 'message_secret': ['j', 'e', ' ', 's', 'u', 'i', 's', ' ', 'v', 'o', 'l', 'd', 'e', 'm', 'o', 'r', 't'], 'permutations': [[10, 0], [4, 1], [3, 2], [8, 3], [13, 4], [7, 5], [14, 6], [9, 7], [14, 8], [13, 9], [13, 10], [12, 11], [14, 13], [15, 14], [16, 15]], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': ['j', 'e', ' ', 's', 'u', 'i', 's', ' ', 'v', 'o', 'l', 'd', 'e', 'm', 'o', 'r', 't'], 'impact': 14}, {'name': 'Jeu de données caché 1', 'message_secret': ['j', 'e', ' ', 's', 'u', 'i', 's', ' ', 'v', 'o', 'l', 'd', 'e', 'm', 'o', 'r', 't'], 'permutations': [[10, 0], [4, 1], [3, 2], [8, 3], [13, 4], [7, 5], [14, 6], [9, 7], [14, 8], [13, 9], [13, 10], [12, 11], [14, 13], [15, 14], [16, 15]], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': ['j', 'e', ' ', 's', 'u', 'i', 's', ' ', 'v', 'o', 'l', 'd', 'e', 'm', 'o', 'r', 't'], 'impact': 3}, {'name': 'Jeu de données caché 2', 'message_secret': ['j', 'e', ' ', 's', 'u', 'i', 's', ' ', 'v', 'o', 'l', 'd', 'e', 'm', 'o', 'r', 't'], 'permutations': [[10, 0], [4, 1], [3, 2], [8, 3], [13, 4], [7, 5], [14, 6], [9, 7], [14, 8], [13, 9], [13, 10], [12, 11], [14, 13], [15, 14], [16, 15]], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': ['j', 'e', ' ', 's', 'u', 'i', 's', ' ', 'v', 'o', 'l', 'd', 'e', 'm', 'o', 'r', 't'], 'impact': 3}]
+Code utilisateur: 
+def permutation(input):
+    message_decode=input[0]
+    permutations = input[1]
+    for permutation in permutations:
+        tmp = message_decode[permutation[1]]
+        message_decode[permutation[1]] = message_decode[permutation[0]]
+        message_decode[permutation[0]] = tmp
+    return message_decode
+
+output=permutation((message_secret, permutations))
+print(output)
+
+Exécution du code utilisateur pour le jeu de données Liste initiale
+Résultat du code utilisateur: ['l', 'u', 's', 'v', 'm', ' ', 'o', 'o', 's', 'e', 'i', 'e', 'd', ' ', 'r', 't', 'j']
+Validation réussie pour le jeu de données Liste initiale.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 1
+Résultat du code utilisateur: ['l', 'u', 's', 'v', 'm', ' ', 'o', 'o', 's', 'e', 'i', 'e', 'd', ' ', 'r', 't', 'j']
+Validation réussie pour le jeu de données Jeu de données caché 1.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 2
+Résultat du code utilisateur: ['l', 'u', 's', 'v', 'm', ' ', 'o', 'o', 's', 'e', 'i', 'e', 'd', ' ', 'r', 't', 'j']
+Validation réussie pour le jeu de données Jeu de données caché 2.
+Fin de l'exercice

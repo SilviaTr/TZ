@@ -1,0 +1,30 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Liste initiale', 'L': [8.5, 24.2, 48.7, 2.1, 16.3, 32.5, 60.0, 15.8, 75.4, 3.9, 21.6, 99.3, 57.8, 80.1, 45.5, 10.2, 63.7, 28.4, 39.9, 88.6, 71.2], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': (2.1, 99.3), 'impact': 14}, {'name': 'Jeu de données caché 1', 'L': [8.5, -2, 48.7, 2.1, 16.3, 32.5, 60.0, 1000, 75.4, 3.9, 1000, 99.3, 57.8, 80.1, 45.5, 10.2, 63.7, 28.4, -2, 88.6, 71.2], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': (-2, 1000), 'impact': 3}, {'name': 'Jeu de données caché 2', 'L': [1, 1, 1, 1, 1, 1], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': (1, 1), 'impact': 3}]
+Code utilisateur: 
+def min_max(input):
+     max =input[0]
+     min = input[0]
+     for i in  input:
+          if i > max :
+               max = i
+          else :
+               if i < min :
+                    min = i
+     return (min, max)
+
+output=min_max(L)
+print(output)
+
+Contrainte non respectée: Pas de min()
+Contrainte non respectée: Pas de max()
+Exécution du code utilisateur pour le jeu de données Liste initiale
+Résultat du code utilisateur: (2.1, 99.3)
+Validation réussie pour le jeu de données Liste initiale.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 1
+Résultat du code utilisateur: (-2, 1000)
+Validation réussie pour le jeu de données Jeu de données caché 1.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 2
+Résultat du code utilisateur: (1, 1)
+Validation réussie pour le jeu de données Jeu de données caché 2.
+Fin de l'exercice

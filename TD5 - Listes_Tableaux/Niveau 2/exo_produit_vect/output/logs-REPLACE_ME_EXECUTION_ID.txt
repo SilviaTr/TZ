@@ -1,0 +1,29 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Vecteurs', 'v1': [2.0, 3.0, 4.0], 'v2': [5.0, 6.0, 7.0], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': [-3.0, 6.0, -3.0], 'impact': 10}, {'name': 'Vecteurs 2 (cachés)', 'v1': [1.0, 7.5, 4.0], 'v2': [5.0, 8.0, 7.0], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': [20.5, 13.0, -29.5], 'impact': 5}, {'name': 'Vecteurs 3 (cachés)', 'v1': [2.0, 9.0, 1.0], 'v2': [5.5, 6.0, -7.0], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': [-69.0, 19.5, -37.5], 'impact': 5}]
+Code utilisateur: 
+def produit_vectoriel(input):
+    v1,v2=input
+    produit_vec = [
+    v1[1] * v2[2] - v1[2] * v2[1],
+    v1[2] * v2[0] - v1[0] * v2[2],
+    v1[0] * v2[1] - v1[1] * v2[0]
+    ]
+    return produit_vec
+
+output = produit_vectoriel((v1,v2))
+print(output)
+
+
+Contrainte respectée: {'name': 'Pas de numpy', 'validation': True, 'message': "Vous avez utilisé la bibliothèque numpy. L'exercice n'est pas validé", 'impact': 20}
+Bonus Obtenu: Pas de for
+Exécution du code utilisateur pour le jeu de données Vecteurs
+Résultat du code utilisateur: [-3.0, 6.0, -3.0]
+Validation réussie pour le jeu de données Vecteurs.
+Exécution du code utilisateur pour le jeu de données Vecteurs 2 (cachés)
+Résultat du code utilisateur: [20.5, 13.0, -29.5]
+Validation réussie pour le jeu de données Vecteurs 2 (cachés).
+Exécution du code utilisateur pour le jeu de données Vecteurs 3 (cachés)
+Résultat du code utilisateur: [-69.0, 19.5, -37.5]
+Validation réussie pour le jeu de données Vecteurs 3 (cachés).
+Fin de l'exercice

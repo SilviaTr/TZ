@@ -1,0 +1,22 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'Granger', 'data': ['Granger', 'Brown', 'Finnigan', 'Potter', 'Thomas', 'Malefoy', 'Londubat', 'Patil', 'Weasley', 'Goyle', 'Crabbe'], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 1, 'impact': 10}]
+Code utilisateur: 
+def position_classe(ordre, nom_eleve):
+    position_eleve = 0
+    while ordre[position_eleve] != nom_eleve and position_eleve < (len(ordre) - 1):
+        position_eleve += 1
+    if ordre[position_eleve] != nom_eleve:
+        position_eleve = -1
+    else:
+        position_eleve += 1
+    return position_eleve
+
+output=position_classe(ordre, nom_eleve)
+print(output)
+
+Contrainte respectée: {'name': 'Pas de numpy', 'validation': True, 'message': "Vous avez utilisé la bibliothèque numpy. L'exercice n'est pas validé", 'impact': 20}
+Exécution du code utilisateur pour le jeu de données Granger
+Résultat du code utilisateur: 1
+Validation réussie pour le jeu de données Granger.
+Fin de l'exercice

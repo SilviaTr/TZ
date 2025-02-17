@@ -1,0 +1,120 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Poufsouffle",
+            "data": [
+                5,
+                5,
+                -1,
+                -5,
+                -1,
+                5,
+                5,
+                -5,
+                10,
+                -1,
+                -1,
+                10,
+                -5,
+                10
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": 50,
+            "correction": 50,
+            "impact": 8
+        },
+        {
+            "name": "Serpentard",
+            "data": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -20,
+                -5,
+                10,
+                5,
+                -1,
+                20,
+                5,
+                5,
+                -1,
+                -1,
+                -1,
+                10
+            ],
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": 55,
+            "correction": 55,
+            "impact": 4
+        },
+        {
+            "name": "Serdaigle",
+            "data": [
+                5,
+                10,
+                -1,
+                -5,
+                10,
+                15,
+                -5,
+                -1,
+                -1,
+                20,
+                10,
+                -5,
+                -5,
+                -5,
+                10
+            ],
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": 80,
+            "correction": 80,
+            "impact": 4
+        },
+        {
+            "name": "Gryffondor",
+            "data": [
+                -1,
+                -1,
+                5,
+                -5,
+                5,
+                5,
+                -5,
+                -5,
+                100,
+                -50,
+                -50,
+                -50,
+                50,
+                50,
+                60,
+                10
+            ],
+            "hidden": true,
+            "validation": true,
+            "resultat_utilisateur": 285,
+            "correction": 285,
+            "impact": 4
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de sum",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la fonction sum. L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        }
+    ],
+    "bonus": [],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}

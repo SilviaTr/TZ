@@ -1,0 +1,25 @@
+Nom de la variable de sortie: resultat-REPLACE_ME_EXECUTION_ID.json
+Démarrage de l'exercice
+Jeux de données: [{'name': 'ordre_attaque', 'data': [14, 15, 16], 'hidden': False, 'validation': False, 'resultat_utilisateur': '', 'correction': 15.0, 'impact': 14}, {'name': 'Jeu de données caché 1', 'data': [0, 5, 10, 10, 15, 20], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': 10.0, 'impact': 3}, {'name': 'Jeu de données caché 2', 'data': [11, 13, 15, 9, 12, 5, 12, 11, 7, 13, 18, 11, 3, 14], 'hidden': True, 'validation': False, 'resultat_utilisateur': '', 'correction': 11.0, 'impact': 3}]
+Code utilisateur: 
+def moyennne(tab):
+    somme = 0
+    for i in tab:
+        somme += i
+    moyenne = somme / len(tab)
+    return moyenne 
+output = moyennne(input)
+print(output)
+
+Contrainte respectée: {'name': 'Pas de sum', 'validation': True, 'message': "Vous avez utilisé la fonction sum. L'exercice n'est pas validé", 'impact': 20}
+Contrainte respectée: {'name': 'Pas de mean', 'validation': True, 'message': 'Vous avez utilisé la fonction mean. Vous perdez 15 points', 'impact': 15}
+Exécution du code utilisateur pour le jeu de données ordre_attaque
+Résultat du code utilisateur: 15.0
+Validation réussie pour le jeu de données ordre_attaque.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 1
+Résultat du code utilisateur: 10.0
+Validation réussie pour le jeu de données Jeu de données caché 1.
+Exécution du code utilisateur pour le jeu de données Jeu de données caché 2
+Résultat du code utilisateur: 11.0
+Validation réussie pour le jeu de données Jeu de données caché 2.
+Fin de l'exercice

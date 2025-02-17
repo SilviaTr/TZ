@@ -1,0 +1,70 @@
+{
+    "success": false,
+    "note": 20,
+    "jeux_de_donnees": [
+        {
+            "name": "Vecteurs",
+            "L": [
+                56,
+                1,
+                21,
+                1,
+                56
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": true,
+            "correction": true,
+            "impact": 10
+        },
+        {
+            "name": "Vecteurs 2 (cach\u00e9s)",
+            "L": [
+                56,
+                1,
+                0,
+                1,
+                1,
+                56
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": false,
+            "correction": false,
+            "impact": 5
+        },
+        {
+            "name": "Vecteurs 3 (cach\u00e9s)",
+            "L": [
+                1,
+                1,
+                201,
+                56,
+                56
+            ],
+            "hidden": false,
+            "validation": true,
+            "resultat_utilisateur": false,
+            "correction": false,
+            "impact": 5
+        }
+    ],
+    "contraintes": [
+        {
+            "name": "Pas de reversed()",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la fonction reversed(). L'exercice n'est pas valid\u00e9",
+            "impact": 20
+        },
+        {
+            "name": "Pas de '=='",
+            "validation": true,
+            "message": "Vous avez utilis\u00e9 la m\u00e9thode '==' l'exercice n'est pas valid\u00e9",
+            "impact": 20
+        }
+    ],
+    "console": {
+        "type": null,
+        "message": []
+    }
+}
