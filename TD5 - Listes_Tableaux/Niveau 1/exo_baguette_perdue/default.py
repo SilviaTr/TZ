@@ -1,4 +1,4 @@
-def recherche_baguette(input):
+def recherche_baguette(piece):
     return baguette
 
-output = recherche_baguette(input)
+output = recherche_baguette(piece)

@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"matrice": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 10
+                "impact": 8
             },
             {
                 "name": "Matrice 2 (cachée)",
@@ -79,7 +79,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 5
+                "impact": 6
             },
             {
                 "name": "Matrice 3 (cachée)",
@@ -88,7 +88,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 5
+                "impact": 6
             }
         ],
         "contraintes": [
@@ -130,7 +130,7 @@ def determinant(input):
     d = input[1][1]
     determinant = a * d - b * c
     return determinant
-output = determinant(input)
+output = determinant(matrice)
 print(output)
 """
 

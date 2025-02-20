@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"donnee": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -72,16 +72,29 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 12
+                "impact": 8
             },
             {
-                "name": "Liste 2 (caché)",
+                "name": "Liste 2 (cachée)",
                 "data": ['1019', '92', '563', '3882', '506', '6229', '9466', '07', '889', '0', '1'],
                 "hidden": True,
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 8
+                "impact": 6
+            },
+            {
+                "name": "Liste 3 (cachée)",
+                "data": ['102', '568', '349', '764', '210', '921', '435', '678', '802', '359',
+    '123', '987', '654', '321', '852', '741', '963', '147', '258', '369',
+    '753', '951', '357', '246', '159', '753', '842', '680', '710', '290',
+    '560', '470', '620', '805', '921', '675', '480', '360', '150', '731',
+    '849', '915', '673', '492', '825', '678', '900', '267', '481', '302'],
+                "hidden": True,
+                "validation": False,
+                "resultat_utilisateur": "",
+                "correction": "",
+                "impact": 6
             }
         ],
         "contraintes": [
@@ -110,7 +123,14 @@ if __name__ == "__main__":
                 "impact": 20
             }
         ],
-        "bonus": [],
+        "bonus": [
+            {
+                "name": "Utilisation de compréhension de liste",
+                "validation": False,
+                "message": "Vous avez utilisé une compréhension de liste. La code est optimisé, vous remportez 5 points bonus !",
+                "impact": 5
+            }
+        ],
         "console": {
             "type": None,
             "message": []
@@ -136,7 +156,7 @@ def type(donnee):
         donnee[i] = int(donnee[i])
     return donnee
 
-output = type(input)
+output = type(donnee)
 print(output)
 """
 
@@ -176,6 +196,16 @@ print(output)
             append_log(f"Contrainte respectée: {contrainte}")
 
     # ETAPE 4: Définition des bonus de l'exercice.
+    for bonus in resultat['bonus']:
+        # Contrainte de replace
+        if bonus['name'] == "Utilisation de compréhension de liste":
+             if "[int(" and "in donnee]" in code_utilisateur:
+                bonus['validation'] = True
+
+        if bonus['validation'] == True:
+            append_log("Bonus Obtenu: " + bonus['name'])
+            resultat['note'] = resultat['note'] + bonus['impact']
+            resultat['note'] = 20 if (resultat['note'] > 20) else resultat['note']
 
     # ETAPE 5: Run les jeux de données
     # Exécution des jeux de données

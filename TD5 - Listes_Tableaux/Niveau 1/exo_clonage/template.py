@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"inventaire": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 10
+                "impact": 8
             },
             {
                 "name": "Liste 2 (caché)",
@@ -79,7 +79,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 10
+                "impact": 12
             }
         ],
         "contraintes": [],
@@ -108,7 +108,7 @@ def clonage(inventaire):
     nouvel_inventaire = inventaire[:]
     nouvel_inventaire[1] = "mandragore"
     return nouvel_inventaire
-output = clonage(input)
+output = clonage(inventaire)
 print(output)
 """
 

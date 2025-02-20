@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"eleves": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 10
+                "impact": 8
             },
             {
                 "name": "Elèves 2 (cachés)",
@@ -79,7 +79,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 5
+                "impact": 6
             },
             {
                 "name": "Elèves 3 (cachés)",
@@ -88,10 +88,17 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 5
+                "impact": 6
             }
         ],
-        "contraintes": [],
+        "contraintes": [
+            {
+                "name": "Pas de for ou while",
+                "validation": False,
+                "message": "Vous avez utilisé une bouble. L'exercice n'est pas validé",
+                "impact": 20
+            }
+        ],
         "bonus": [],
         "console": {
             "type": None,
@@ -126,15 +133,32 @@ def groupe_duel(eleves):
         groupe2 = eleves[len(eleves) // 2 + 1 :]
     return groupe1, groupe2
 
-output = groupe_duel(input)
+output = groupe_duel(eleves)
 print(output)
 """
 
     append_log(f"Code utilisateur: {code_utilisateur}")
 
     # Étape 3: Définition des contraintes de l'exercice.
+    for contrainte in resultat['contraintes']:
+        if contrainte['name'] == "Pas de boucle":
+            if "for" or "while" in code_utilisateur:
+                contrainte['validation'] = False
+            else:
+                contrainte['validation'] = True
 
-    # ETAPE 4: Définition des bonus de l'exercice.
+        if contrainte['name'] == "Pas de break":
+            if "break" in code_utilisateur:
+                contrainte['validation'] = False
+            else:
+                contrainte['validation'] = True
+
+        if contrainte['validation'] == False:
+            append_log("Contrainte non respectée: " + contrainte['name'])
+            resultat['note'] = resultat['note'] - contrainte['impact']
+            resultat['note'] = 0 if (resultat['note'] < 0) else resultat['note']
+        else:
+            append_log(f"Contrainte respectée: {contrainte}")
 
     # ETAPE 5: Run les jeux de données
     # Exécution des jeux de données

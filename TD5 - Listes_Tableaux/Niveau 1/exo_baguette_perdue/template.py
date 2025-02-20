@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"piece": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 10
+                "impact": 8
             },
             {
                 "name": "Pièce 2",
@@ -79,7 +79,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 5
+                "impact": 6
             },
             {
                 "name": "Pièce 3",
@@ -88,7 +88,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 5
+                "impact": 6
             }
         ],
         "contraintes": [
@@ -146,7 +146,7 @@ def recherche_baguette(piece):
         indice_piece += 1
     return baguette
 
-output = recherche_baguette(input)
+output = recherche_baguette(piece)
 print(output)
 """
 
