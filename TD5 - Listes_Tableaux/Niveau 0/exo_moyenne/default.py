@@ -1,4 +1,4 @@
 def moyenne(input):
     return moyenne
 
-output = element()
+output = moyenne(notes)

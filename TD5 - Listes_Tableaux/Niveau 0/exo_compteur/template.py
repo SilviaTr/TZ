@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"planets": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -76,25 +76,30 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 14
+                "impact": 8
             },
             {
                 "name": "Jeu de données caché 1",
-                "data": ['', '', '', ''],
+                "data": ['Sirius', 'Canopus', 'Vega', 'Arcturus', 'Bételgeuse', 'Rigel', 'Aldébaran',
+    'Procyon', 'Spica', 'Pollux', 'Deneb', 'Antares', 'Altair', 'Fomalhaut',
+    'Achernar', 'Regulus', 'Castor', 'Bellatrix', 'Alnilam', 'Mintaka',
+    'Mirfak', 'Dubhe', 'Phecda', 'Merak', 'Alioth', 'Mizar', 'Alkaid',
+    'Shaula', 'Kaus Australis', 'Nunki', 'Hamal', 'Zubenelgenubi',
+    'Zubeneschamali', 'Markab', 'Alpheratz', 'Alhena', 'Eltanin'],
                 "hidden": True,
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 3
+                "impact": 6
             },
             {
                 "name": "Jeu de données caché 2",
-                "data":  [''],
+                "data":  [],
                 "hidden": True,
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 3
+                "impact": 6
             }
         ],
         "contraintes": [
@@ -103,19 +108,13 @@ if __name__ == "__main__":
                 "validation": False,
                 "message": "Vous avez utilisé la fonction len. L'exercice n'est pas validé",
                 "impact": 20
-            },
-            {
-                "name": "Trop de for",
-                "validation": False,
-                "message": "Vous avez utilisé trop de for. Vous perdez 1 point",
-                "impact": 1
             }
         ],
         "bonus": [{
-            "name": "Moins de 2 for",
+            "name": "Pas de count",
             "validation": False,
-            "message": "Vous avez réussi l'exercice avec moins de 2 for, +3 points !",
-            "impact": 3
+            "message": "Vous avez réussi l'exercice sans utiliser count(), +1 point !",
+            "impact": 1
         }],
         "console": {
             "type": None,
@@ -141,26 +140,20 @@ if __name__ == "__main__":
     code_utilisateur = """
 def compteur(input):
     nombre = 0
+    print(input)
     for k in input:
         nombre += 1
     return nombre
-output = compteur(input)
-"""
+output=compteur(planets)
+        """
 
     append_log(f"Code utilisateur: {code_utilisateur}")
 
     # Étape 3: Définition des contraintes de l'exercice.
     for contrainte in resultat['contraintes']:
-        # Contrainte de replace
+        # Contrainte de len
         if contrainte['name'] == "Pas de len":
             if "len" in code_utilisateur:
-                contrainte['validation'] = False
-            else:
-                contrainte['validation'] = True
-
-        # Contrainte trop de if
-        if contrainte['name'] == "Trop de If":
-            if code_utilisateur.count("if") > 1:
                 contrainte['validation'] = False
             else:
                 contrainte['validation'] = True
@@ -174,9 +167,9 @@ output = compteur(input)
 
     # ETAPE 4: Définition des bonus de l'exercice.
     for bonus in resultat['bonus']:
-        # Contrainte de replace
-        if bonus['name'] == "Moins de 2 for":
-            if code_utilisateur.count("for") < 2:
+        # Bonus de count
+        if contrainte['name'] == "Pas de count":
+            if "count" not in code_utilisateur:
                 bonus['validation'] = True
 
         if bonus['validation'] == True:

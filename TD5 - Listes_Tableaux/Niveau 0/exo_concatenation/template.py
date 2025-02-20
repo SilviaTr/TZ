@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"ordre_attaque": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -77,7 +77,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 14
+                "impact": 8
             },
             {
                 "name": "Jeu de données caché 1",
@@ -92,7 +92,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 3
+                "impact": 6
             },
             {
                 "name": "Jeu de données caché 2",
@@ -108,7 +108,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 3
+                "impact": 6
             }
         ],
         "contraintes": [
@@ -117,12 +117,6 @@ if __name__ == "__main__":
                 "validation": False,
                 "message": "Vous avez utilisé la fonction join. L'exercice n'est pas validé",
                 "impact": 20
-            },
-            {
-                "name": "Trop de for",
-                "validation": False,
-                "message": "Vous avez utilisé trop de for. Vous perdez 1 point",
-                "impact": 1
             }
         ],
         "bonus": [{
@@ -163,7 +157,7 @@ def concat(input):
         else:
             ordre_attaque_conca += input[k]
     return ordre_attaque_conca
-output = concat(input)
+output = concat(ordre_attaque)
 
 print(output)
 """
@@ -172,16 +166,9 @@ print(output)
 
     # Étape 3: Définition des contraintes de l'exercice.
     for contrainte in resultat['contraintes']:
-        # Contrainte de replace
+        # Contrainte de join
         if contrainte['name'] == "Pas de join":
             if "join" in code_utilisateur:
-                contrainte['validation'] = False
-            else:
-                contrainte['validation'] = True
-
-        # Contrainte trop de if
-        if contrainte['name'] == "Trop de If":
-            if code_utilisateur.count("if") > 1:
                 contrainte['validation'] = False
             else:
                 contrainte['validation'] = True
@@ -195,7 +182,7 @@ print(output)
 
     # ETAPE 4: Définition des bonus de l'exercice.
     for bonus in resultat['bonus']:
-        # Contrainte de replace
+        # Bonus moins de 2 for
         if bonus['name'] == "Moins de 2 for":
             if code_utilisateur.count("for") < 2:
                 bonus['validation'] = True

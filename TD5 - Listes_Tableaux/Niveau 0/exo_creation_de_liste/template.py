@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"ma_liste": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -64,8 +64,8 @@ if __name__ == "__main__":
         "note": 20,
         "jeux_de_donnees": [
             {
-                "name": "ordre_attaque",
-                "data": 100,
+                "name": "ma_liste",
+                "data": [],
                 "hidden": False,
                 "validation": False,
                 "resultat_utilisateur": "",
@@ -82,10 +82,10 @@ if __name__ == "__main__":
             }
         ],
         "bonus": [{
-            "name": "Moins de 2 for",
+            "name": "Pas de for",
             "validation": False,
-            "message": "Vous avez réussi l'exercice avec moins de 2 for, +3 points !",
-            "impact": 3
+            "message": "Vous avez réussi l'exercice sans utilisé de for, +2 points !",
+            "impact": 2
         }],
         "console": {
             "type": None,
@@ -95,9 +95,8 @@ if __name__ == "__main__":
 
 
     # ETAPE 2: Définition des jeux de données
-    def input_function(input):
-        ma_liste = []
-        for i in range(1, input + 1):
+    def input_function(ma_liste):
+        for i in range(1, 101):
             ma_liste += [i]
         return ma_liste
 
@@ -108,16 +107,11 @@ if __name__ == "__main__":
 
     # Le code utilisateur est injecté ici
     code_utilisateur = """
-def create_list(n):
-    ma_liste = []
-    for i in range(1, n + 1):
+def input_function(ma_liste):
+    for i in range(1, 101):
         ma_liste += [i]
-    return ma_liste
-n = 100
-output = create_list(n)
-print(output)
+output = input_function(ma_liste)
 """
-
     append_log(f"Code utilisateur: {code_utilisateur}")
 
     # Étape 3: Définition des contraintes de l'exercice.

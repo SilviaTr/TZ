@@ -1,4 +1,4 @@
-def (input):
+def somme_points(points):
     return somme
 
-output = somme_points()
+output = somme_points(points)

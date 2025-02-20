@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"elements_tony_stark": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -79,7 +79,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 14
+                "impact": 8
             },
             {
                 "name": "Jeu de données caché 1",
@@ -94,7 +94,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 3
+                "impact": 6
             },
             {
                 "name": "Jeu de données caché 2",
@@ -110,14 +110,14 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 3
+                "impact": 6
             }
         ],
         "contraintes": [],
         "bonus": [{
-            "name": "Moins de 2 for",
+            "name": "Utilisation du for",
             "validation": False,
-            "message": "Vous avez réussi l'exercice avec moins de 2 for, +3 points !",
+            "message": "Vous avez réussi l'exercice en utilisant une boucle for, +3 points !",
             "impact": 3
         }],
         "console": {
@@ -129,10 +129,10 @@ if __name__ == "__main__":
 
     # ETAPE 2: Définition des jeux de données
     def input_function(input):
-        premier_element = input[0]  # Premier élément
-        troisieme_element =input[2]  # Troisième élément
-        vingt_troisieme_element =input[22]  # Vingt-troisième élément
-        avant_dernier_element = input[-2]  # Avant-dernier élément
+        premier_element = input[0]  
+        troisieme_element =input[2]  
+        vingt_troisieme_element =input[22]  
+        avant_dernier_element = input[-2] 
         dernier_element = input[-1]
         return [premier_element,troisieme_element,vingt_troisieme_element,avant_dernier_element,dernier_element]
 
@@ -142,36 +142,27 @@ if __name__ == "__main__":
     append_log(f"Jeux de données: {resultat['jeux_de_donnees']}")
 
     # Le code utilisateur est injecté ici
-    code_utilisateur = """
+    code_utilisateur = """    
 def element(input):
-    premier_element = input[0]  # Premier élément
-    troisieme_element =input[2]  # Troisième élément
-    vingt_troisieme_element =input[22]  # Vingt-troisième élément
-    avant_dernier_element = input[-2]  # Avant-dernier élément
+    premier_element = input[0] 
+    troisieme_element =input[2] 
+    vingt_troisieme_element =input[22]  
+    avant_dernier_element = input[-2] 
     dernier_element = input[-1]
     return [premier_element,troisieme_element,vingt_troisieme_element,avant_dernier_element,dernier_element]
 
-output = element(input)
-print(output)
-"""
+output = element(elements_tony_stark)
+    """
 
     append_log(f"Code utilisateur: {code_utilisateur}")
 
     # Étape 3: Définition des contraintes de l'exercice.
-    for contrainte in resultat['contraintes']:
-
-        if contrainte['validation'] == False:
-            append_log("Contrainte non respectée: " + contrainte['name'])
-            resultat['note'] = resultat['note'] - contrainte['impact']
-            resultat['note'] = 0 if (resultat['note'] < 0) else resultat['note']
-        else:
-            append_log(f"Contrainte respectée: {contrainte}")
 
     # ETAPE 4: Définition des bonus de l'exercice.
     for bonus in resultat['bonus']:
         # Contrainte de replace
-        if bonus['name'] == "Moins de 2 for":
-            if code_utilisateur.count("for") < 2:
+        if bonus['name'] == "Utilisation du for":
+            if "for" in code_utilisateur:
                 bonus['validation'] = True
 
         if bonus['validation'] == True:

@@ -1,5 +1,5 @@
-def compteur(input):
+def compteur(planets):
     return input
 
-output = compteur(input)
+output = compteur(planets)
 

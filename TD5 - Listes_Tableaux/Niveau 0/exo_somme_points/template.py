@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"points": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -137,7 +137,7 @@ def somme_points(input):
             somme += point
     return somme
 
-output = somme_points(input)
+output = somme_points(points)
 print(output)
 """
 

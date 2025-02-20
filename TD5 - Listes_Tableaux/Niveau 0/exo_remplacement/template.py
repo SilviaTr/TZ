@@ -17,7 +17,7 @@ def execute_user_code(code, input_data):
     """
     Execute le code utilisateur de manière sécurisée et renvoie le résultat ou une erreur.
     """
-    local_namespace = {"input": input_data}
+    local_namespace = {"lettres": input_data}
     restricted_globals = {}
 
     # Redirection de la sortie standard pour capturer la sortie du code utilisateur
@@ -72,7 +72,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 14
+                "impact": 8
             },
             {
                 "name": "Jeu de données caché 1",
@@ -81,7 +81,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 3
+                "impact": 6
             },
             {
                 "name": "Jeu de données caché 2",
@@ -90,7 +90,7 @@ if __name__ == "__main__":
                 "validation": False,
                 "resultat_utilisateur": "",
                 "correction": "",
-                "impact": 3
+                "impact": 6
             }
         ],
         "contraintes": [
@@ -135,7 +135,7 @@ def remplacement(lettres):
             lettres[k] = 'w'
     return lettres
 
-output = remplacement(input)
+output = remplacement(lettres)
 print(output)
 """
 
